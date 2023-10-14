@@ -15,7 +15,7 @@ router.get('/contact-us', (req, res, next) => {
   res.sendFile(path.join(rootDir, 'views', 'contact-us.html'));
 });
 
-router.get('/contact-us', (req, res, next) => {
+router.post('/success', (req, res, next) => {
   res.sendFile(path.join(rootDir, 'views', 'success.html'));
 });
 
@@ -24,15 +24,5 @@ router.post('/add-product', (req, res, next) => {
   console.log(req.body);
   res.redirect('/');
 });
-
-router.post('/contact-us', (req, res, next) => {
-  // console.log(req.body);
-  res.redirect('/success');
-});
-
-
-
-
-
 
 module.exports = router;
